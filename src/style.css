@@ -68,12 +68,12 @@ h1 {
   font-size: 80px;
 
   font-weight: 700;
-  line-height: 1;
-  margin-left: 10px;
+  line-height: 0;
+  margin-left: 0px;
 }
 .unit {
   color: #212121;
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 200;
   line-height: 36px;
   line-height: 1;
@@ -88,4 +88,10 @@ h1 {
 .pink {
   color: #f65282;
   font-weight: 400;
+}
+a {
+  text-decoration: none;
+}
+.temperature-container.active {
+  color: #212121;
 }
