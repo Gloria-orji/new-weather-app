@@ -12,6 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -27,18 +28,25 @@
         </form>
         <div class="row">
           <div class="col-6">
-            <h1>New York</h1>
+            <h1 id="city">New York</h1>
             <ul class="weatherLi">
-              <li>Saturday 03:57, clear sky</li>
               <li>
-                Humidity: <span class="pink">57%</span>, Wind:
-                <span class="pink">5.66km/h</span>
+                Last updated:<span id="date">Saturday 03:57</span>,<span
+                  id="description"
+                  >clear sky</span
+                >
+              </li>
+              <li>
+                Humidity: <span class="pink" id="humidity">57</span
+                ><span class="pink">%</span>, Wind:
+                <span class="pink" id="wind">5.6</span
+                ><span class="pink">km/h</span>
               </li>
             </ul>
           </div>
           <div class="col-6">
             <div class="temperature-container d-flex justify-content-end">
-              <div class="temperature">🤩11</div>
+              <div class="temperature">🤩<span id="temp-heading">11</span></div>
               <span class="unit">°c</span>
             </div>
           </div>
