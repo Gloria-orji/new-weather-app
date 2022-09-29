@@ -95,3 +95,23 @@ a {
 .temperature-container.active {
   color: #212121;
 }
+.weather-forecast-temperature-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+  color: #f65282;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-left: 10px;
+}
+.weather-forecast-temperature-max {
+  color: #f65282;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.5;
+}
