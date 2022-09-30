@@ -21,6 +21,30 @@ function formatDate(timestamp) {
   }
   return `${day} ${hour}:${minute}`;
 }
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="weather-forecast-date">${day}</div>
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                width="42"
+              />
+              <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">24°</span
+                ><span class="weather-forecast-temperature-min">12°</span>
+              </div>
+            </div>
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temp-heading").innerHTML = Math.round(
@@ -72,3 +96,4 @@ let fahrLink = document.querySelector("#fahr");
 fahrLink.addEventListener("click", displayFahrenheitTemp);
 let celLink = document.querySelector("#cel");
 celLink.addEventListener("click", displaycelciusTemp);
+displayForecast();
